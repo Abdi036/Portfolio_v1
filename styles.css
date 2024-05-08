@@ -77,3 +77,14 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+/* styling the text font */
+.header_text {
+    margin-top: 20%;
+    font-size: 30px;
+  }
+  
+  .header_text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    text-shadow: 3px 3px 5px #000000ba;
+  }
