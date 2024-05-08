@@ -8,3 +8,33 @@ const sideBar = document.querySelector(".side-bar");
 const closeBar = document.querySelector(".fa-circle-xmark");
 const navContainer = document.querySelector(".nav-container");
 
+// handling the sideBar clicks
+tabTitles.addEventListener("click", function (event) {
+  if (!event.target || !event.target.classList.contains("tab-links")) {
+    return;
+  }
+
+  for (let tabLink of tabLinks) {
+    tabLink.classList.remove("active");
+  }
+
+  for (let tabContent of tabContents) {
+    tabContent.classList.remove("active-tab");
+  }
+
+  event.target.classList.add("active");
+
+  const index = Array.from(tabLinks).indexOf(event.target);
+
+  tabContents[index].classList.add("active-tab");
+});
+
+openBar.addEventListener("click", function () {
+  sideBar.style.right = "0";
+});
+
+closeBar.addEventListener("click", function () {
+  sideBar.style.right = "-200px";
+});
+
+//  implementing navigation bar
