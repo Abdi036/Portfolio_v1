@@ -42,10 +42,6 @@ const scrollDistance = 450;
 
 window.addEventListener("scroll", function () {
   const scrollTop = document.documentElement.scrollTop;
-
-  console.log(scrollTop);
-  if (scrollTop <= 0) {
-  }
   if (scrollTop > scrollDistance) {
     navContainer.style.top = "0";
   } else {
