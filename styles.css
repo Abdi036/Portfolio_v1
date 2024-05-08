@@ -353,3 +353,64 @@ form .btn2 {
   font-weight: 300;
   margin-top: 20px;
 }
+
+/* Media query for Responsivness */
+nav .fas {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .header_text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header_text h1 {
+    font-size: 30px;
+  }
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background: orange;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+  .about-1,
+  .about-2 {
+    flex-basis: 100%;
+  }
+  .about-1 {
+    margin-bottom: 30px;
+  }
+  .about-2 {
+    font-size: 14px;
+  }
+  .about-2 h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .tab-links {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  .col-left,
+  .col-right {
+    flex-basis: 100%;
+  }
+}
