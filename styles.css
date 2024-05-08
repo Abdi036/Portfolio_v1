@@ -203,3 +203,84 @@ nav ul li a:hover::after {
   transform: translateY(-8px);
   transition: 0.5s;
 }
+
+.portfolio {
+  padding: 50px 0;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.project {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.project img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, #000, #ffa600a2);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #ff4500;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.project:hover img {
+  transform: scale(1.1);
+}
+.project:hover .layer {
+  height: 100%;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff4500;
+  border-radius: 6px;
+  padding: 14px 50px;
+  text-decoration: none;
+  color: #fff;
+  transition: bakcground 0.5s;
+}
+.btn:hover {
+  background: #8d5b00cd;
+  transition: 0.5s;
+}
